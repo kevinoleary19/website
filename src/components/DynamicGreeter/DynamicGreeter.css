@@ -1,0 +1,17 @@
+.dynamic-greeter {
+  padding-top: 12%;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.dynamic-greeter__text {
+  color: #ffffff;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  cursor: default;
+}
+
+.dynamic-greeter__text--highlight {
+  margin-left: 0.4rem;
+  color: #ff5c7d;
+}

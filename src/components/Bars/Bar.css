@@ -1,0 +1,7 @@
+.bar {
+  height: 1%;
+  width: 6%;
+  margin: 0 2%;
+  transition: 0.37s;
+  transform-origin: top;
+}

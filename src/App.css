@@ -1,0 +1,12 @@
+/* Overrides */
+/*------------------------------------*/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/*------------------------------------*/
+.app {
+  font-family: 'Proxima Nova';
+}

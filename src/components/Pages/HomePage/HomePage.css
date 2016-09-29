@@ -1,0 +1,10 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: calc(100vh - 6rem);
+  padding-top: 6rem;
+  background-color: #201f1e;
+}
