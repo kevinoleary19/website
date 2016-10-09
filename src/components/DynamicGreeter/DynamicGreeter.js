@@ -1,24 +1,20 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
 import './DynamicGreeter.css';
 
-export default class DynamicGreeter extends Component {
-  static propTypes = {
-      currentHobby: PropTypes.string.isRequired
-  }
+const DynamicGreeter = (props) => (
+  <section className="dynamic-greeter">
+    <p className="dynamic-greeter__text">
+      Hi! I'm Kevin, a full stack developer <br></br> who loves
+      <span className="dynamic-greeter__text--highlight">
+        { props.currentHobby }
+      </span>
+    </p>
+  </section>
+);
 
-  render() {
-    const { currentHobby } = this.props;
+DynamicGreeter.propTypes = {
+    currentHobby: PropTypes.string.isRequired
+};
 
-    return (
-      <section className="dynamic-greeter">
-        <p className="dynamic-greeter__text">
-          Hi! I'm Kevin, a full stack developer <br></br> who loves
-          <span className="dynamic-greeter__text--highlight">
-            { currentHobby }
-          </span>
-        </p>
-      </section>
-    );
-  }
-}
+export default DynamicGreeter;

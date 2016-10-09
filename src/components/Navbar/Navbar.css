@@ -5,7 +5,7 @@
   justify-content: center;
   z-index: 100;
   width: 100%;
-  height: 6rem;
+  height: 4.5rem;
   font-family: 'Moon';
   background-color: #201f1e;
 }
@@ -13,7 +13,7 @@
 .navbar__item {
   position: relative;
   margin: 0 2rem;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   color: #ff5c7d;
   cursor: pointer;
   transition: 0.2s;

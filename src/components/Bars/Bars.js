@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 import './Bars.css';
-import Bar from './Bar';
+
 
 export default class Bars extends Component {
   static propTypes = {
@@ -97,13 +97,15 @@ export default class Bars extends Component {
     return (
       <section className="bars">
         {this.state.bars.map(bar =>
-            <Bar
-              backgroundColor={bar.color}
-              height={bar.height}
-              key={this.state.bars.indexOf[bar]}>
-            </Bar>
-          )
-        }
+          <div
+            className="bar"
+            style={{
+              backgroundColor: bar.color,
+              transform: `scaleY(${bar.height})`
+            }}
+            key={this.state.bars.indexOf[bar]}
+          ></div>
+        )}
       </section>
     );
   }

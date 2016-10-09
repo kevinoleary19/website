@@ -3,8 +3,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
   width: 100vw;
-  height: calc(100vh - 6rem);
-  padding-top: 6rem;
+  height: 100vh;
+  padding-top: 4.5rem;
   background-color: #201f1e;
 }

@@ -1,5 +1,5 @@
 .dynamic-greeter {
-  padding-top: 12%;
+  padding-top: calc(((100vh - 4.5rem) / 2) - 9rem);
   font-size: 1.1rem;
   font-weight: 300;
 }
