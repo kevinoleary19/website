@@ -19,6 +19,7 @@
   align-items: center;
   box-sizing: border-box;
   width: 80%;
+  max-width: 60rem;
   padding: 5rem 4rem;
   border: 1px solid #ff5c7d;
   border-radius: 2px;

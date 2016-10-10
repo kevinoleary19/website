@@ -15,7 +15,7 @@ export default class App extends Component {
     this.state = {
       currentHobby: this.hobbies[0]
     };
-    this.changeInterval = setInterval(() => this.changeHobby(), 4500);
+    this.changeInterval = setInterval(() => this.changeHobby(), 3500);
   }
 
   changeHobby() {
