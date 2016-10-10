@@ -8,8 +8,8 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: calc(100vh - 6rem);
-  padding-top: 6rem;
+  height: calc(100vh - 4.5rem);
+  padding-top: 4.5rem;
   background-color: #201f1e;
 }
 
@@ -20,7 +20,6 @@
   box-sizing: border-box;
   width: 80%;
   padding: 5rem 4rem;
-  /*border-image: linear-gradient(to right, #ff5c7d , #ff5c4f) 1 100%;*/
   border: 1px solid #ff5c7d;
   border-radius: 2px;
   color: #f4f3f2;

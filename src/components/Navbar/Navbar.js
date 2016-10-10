@@ -11,7 +11,7 @@ const Navbar = () => (
       </Link>
     </div>
     <div className="navbar__item">
-      <Link href="/">
+      <Link href="/projects">
         Projects
       </Link>
     </div>

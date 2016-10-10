@@ -6,6 +6,7 @@ import AboutPage from './components/Pages/AboutPage/AboutPage';
 import HomePage from './components/Pages/HomePage/HomePage';
 import Navbar from './components/Navbar/Navbar';
 import NotFoundPage from './components/Pages/NotFoundPage/NotFoundPage';
+import ProjectPage from './components/Pages/ProjectsPage/ProjectPage';
 
 export default class App extends Component {
   constructor() {
@@ -38,15 +39,9 @@ export default class App extends Component {
       <div className="app">
         <Navbar/>
         <Locations>
-          <Location
-            path='/'
-            handler={ HomePage }
-            currentHobby={this.state.currentHobby}
-          />
-          <Location
-            path='/about'
-            handler={ AboutPage }
-          />
+          <Location path='/' handler={ HomePage } currentHobby={this.state.currentHobby}/>
+          <Location path='/about' handler={ AboutPage }/>
+          <Location path="/projects" handler={ ProjectPage }/>
           <NotFound handler={ NotFoundPage }/>
         </Locations>
       </div>

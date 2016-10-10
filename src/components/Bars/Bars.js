@@ -96,14 +96,14 @@ export default class Bars extends Component {
   render() {
     return (
       <section className="bars">
-        {this.state.bars.map(bar =>
+        {this.state.bars.map((bar, index) =>
           <div
             className="bar"
             style={{
               backgroundColor: bar.color,
               transform: `scaleY(${bar.height})`
             }}
-            key={this.state.bars.indexOf[bar]}
+            key={index}
           ></div>
         )}
       </section>
