@@ -1,0 +1,90 @@
+.project {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12rem;
+}
+
+.project--datepicker {
+  margin-top: 6rem;
+}
+
+.project--datepicker .project__box {
+  margin-top: 1.2rem;
+}
+
+.project--nusci-mag .project__box {
+  margin-top: 1.2rem;
+}
+
+.project__circle {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.7rem;
+  margin-left: 0.07rem;
+  width: 50%;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid #ff5c7d;
+  border-radius: 2rem;
+  background-color: #201f1e;
+}
+
+.project--datepicker {
+  margin-top: 5rem;
+}
+
+.project__image {
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid #ff5c7d;
+  background-color: #f4f3f2;
+}
+
+.project__middle {
+  order: 2;
+  width: 16rem;
+  height: 4rem;
+  margin-top: -4rem;
+  border-bottom: 1px solid #ff5c7d;
+  border-right: 1px solid #ff5c7d;
+}
+
+.project__box {
+  width: 24rem;
+  color: #f4f3f2;
+}
+
+.project__box--datepicker {
+  margin-top: 1.4rem;
+}
+
+.project__box__header {
+  margin-bottom: 1rem;
+  padding-left: 1.8rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.project__box__line {
+  width: 100%;
+  height: 1px;
+  background-color: #ff5c7d;
+  margin-bottom: 1.2rem;
+}
+
+.project__box__subheader {
+  padding-left: 1.8rem;
+  margin: 1.5rem 0 .5rem;
+  font-weight: bold;
+}
+
+.project__box__text {
+  max-width: 80%;
+  padding-left: 1.8rem;
+  font-weight: 300;
+  line-height: 1.3;
+}

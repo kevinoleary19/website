@@ -1,0 +1,42 @@
+::selection {
+  background-color: #ff8aa1;
+}
+
+.project-page {
+  position: relative;
+  background-color: #201f1e;
+  padding-top: 4.5rem;
+  overflow: hidden;
+}
+
+.project-page__divider {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: #ff5c7d;
+  left: 50%;
+}
+
+.project-page__divider-box--bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 5rem;
+  height: 2rem;
+  border-top: 1px solid #ff5c7d;
+  background-color: #201f1e;
+}
+
+.project-page__divider-box--top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 4rem auto 0;
+  width: 5rem;
+  height: 3.5rem;
+  border-bottom: 1px solid #ff5c7d;
+  background-color: #201f1e;
+}
