@@ -1,23 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-component';
 
-import './NotFoundPage.css';
-
+import './NotFoundPage.scss';
 
 function NotFoundPage()  {
-
   const stars = [];
-
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < 50; i++) {
     stars.push({
       size: Math.ceil(Math.random() * 5),
       x: Math.ceil(Math.random() * 100),
       y: Math.ceil(Math.random() * 50)
-    })
+    });
   }
 
   return (
-    <section className="not-found-page">
+    <section className="NotFoundPage">
       <div className="star-container">
         { stars.map((star, index) =>
             <div
@@ -32,15 +29,15 @@ function NotFoundPage()  {
             />
         )}
       </div>
-      <div className="nfp__box">
-        <div className="nfp__404">
+      <div className="NFP__box">
+        <div className="NFP__404">
           404
         </div>
-        <div className="nfp__text">
+        <div className="NFP__text">
           Oh no! You've tried looking for something that <br />
           doesn't exist. A true absurdist at heart.
         </div>
-        <div className="nfp__button">
+        <div className="NFP__button">
           <Link href="/">
             Return to Normalcy
           </Link>

@@ -1,0 +1,46 @@
+@import 'colors';
+
+::selection {
+  background-color: #ff8aa1;
+}
+
+.ProjectPage {
+  position: relative;
+  background-color: $onyx;
+  padding-top: 4.5rem;
+  overflow: hidden;
+}
+
+.ProjectPage__divider {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: $punch;
+  left: 50%;
+}
+
+.ProjectPage__divider-box {
+  &--bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 5rem;
+    height: 2rem;
+    border-top: 1px solid $punch;
+    background-color: $onyx;
+  }
+
+  &--top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 4rem auto 0;
+    width: 5rem;
+    height: 3.5rem;
+    border-bottom: 1px solid $punch;
+    background-color: $onyx;
+  }
+}

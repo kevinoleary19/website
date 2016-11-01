@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 
 import Bars from '../../Bars/Bars';
 import DynamicGreeter from '../../DynamicGreeter/DynamicGreeter';
-import './HomePage.css';
+import './HomePage.scss';
 
 export default class HomePage extends Component {
   static propTypes = {
@@ -11,9 +11,9 @@ export default class HomePage extends Component {
 
   render() {
     return (
-      <section className="home-page">
+      <section className="HomePage">
         <DynamicGreeter
-          className="home-page__greeter"
+          className="HomePage__greeter"
           currentHobby={this.props.currentHobby}
         ></DynamicGreeter>
         <Bars

@@ -1,15 +1,14 @@
 import React from 'react';
 
-import './ProjectPage.css';
+import './ProjectPage.scss';
 import { projects } from '../../../data/data';
 import Project from '../../Project/Project';
 
-
 const ProjectPage = () => (
-  <section className="project-page">
-    <div className="project-page__divider" />
-    <div className="project-page__divider-box--top" />
-    <div className="project-page__divider-box--bottom" />
+  <section className="ProjectPage">
+    <div className="ProjectPage__divider" />
+    <div className="ProjectPage__divider-box--top" />
+    <div className="ProjectPage__divider-box--bottom" />
     {
       projects.map((project, index) =>
         <Project

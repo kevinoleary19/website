@@ -1,4 +1,6 @@
-.home-page {
+@import 'colors';
+
+.HomePage {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -7,5 +9,5 @@
   width: 100vw;
   height: 100vh;
   padding-top: 4.5rem;
-  background-color: #201f1e;
+  background-color: $onyx;
 }

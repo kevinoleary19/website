@@ -1,26 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-component';
 
-import './Navbar.css';
+import './Navbar.scss';
 
 const Navbar = () => (
-  <div className="navbar">
-    <div className="navbar__item">
+  <div className="Navbar">
+    <div className="Navbar__item">
       <Link href="/">
         Home
       </Link>
     </div>
-    <div className="navbar__item">
+    <div className="Navbar__item">
       <Link href="/projects">
         Projects
       </Link>
     </div>
-    <div className="navbar__item">
+    <div className="Navbar__item">
       <Link href="/about">
         Me
       </Link>
     </div>
-    <div className="navbar__item">
+    <div className="Navbar__item">
       <Link href="/r">
         404
       </Link>

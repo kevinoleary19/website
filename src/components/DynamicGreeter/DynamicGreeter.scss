@@ -1,17 +1,19 @@
-.dynamic-greeter {
+@import 'colors';
+
+.DynamicGreeter {
   padding-top: calc(((100vh - 4.5rem) / 2) - 9rem);
   font-size: 1.1rem;
   font-weight: 300;
 }
 
-.dynamic-greeter__text {
-  color: #ffffff;
+.DynamicGreeter__text {
+  color: $white;
   font-size: 1.3rem;
   line-height: 1.8rem;
   cursor: default;
-}
 
-.dynamic-greeter__text--highlight {
-  margin-left: 0.4rem;
-  color: #ff5c7d;
+  &--highlight {
+    margin-left: 0.4rem;
+    color: $punch;
+  }
 }

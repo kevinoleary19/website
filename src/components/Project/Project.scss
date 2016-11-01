@@ -1,24 +1,26 @@
-.project {
+@import 'colors';
+
+.Project {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 12rem;
+
+  &--datepicker {
+    margin-top: 6rem;
+  }
 }
 
-.project--datepicker {
-  margin-top: 6rem;
-}
-
-.project--datepicker .project__box {
+.Project--datepicker .Project__box {
   margin-top: 1.2rem;
 }
 
-.project--nusci-mag .project__box {
+.Project--nusci-mag .Project__box {
   margin-top: 1.2rem;
 }
 
-.project__circle {
+.Project__circle {
   z-index: 1;
   position: absolute;
   top: 50%;
@@ -27,41 +29,41 @@
   width: 50%;
   width: 1.4rem;
   height: 1.4rem;
-  border: 1px solid #ff5c7d;
+  border: 1px solid $punch;
   border-radius: 2rem;
-  background-color: #201f1e;
+  background-color: $onyx;
 }
 
-.project--datepicker {
+.Project--datepicker {
   margin-top: 5rem;
 }
 
-.project__image {
-  width: 18rem;
-  height: 18rem;
-  border: 1px solid #ff5c7d;
-  background-color: #f4f3f2;
+.Project__box {
+  width: 24rem;
+  color: $cloud;
+
+  &--datepicker {
+    margin-top: 1.4rem;
+  }
 }
 
-.project__middle {
+.Project__image {
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid $punch;
+  background-color: $cloud;
+}
+
+.Project__middle {
   order: 2;
   width: 16rem;
   height: 4rem;
   margin-top: -4rem;
-  border-bottom: 1px solid #ff5c7d;
-  border-right: 1px solid #ff5c7d;
+  border-bottom: 1px solid $punch;
+  border-right: 1px solid $punch;
 }
 
-.project__box {
-  width: 24rem;
-  color: #f4f3f2;
-}
-
-.project__box--datepicker {
-  margin-top: 1.4rem;
-}
-
-.project__box__header {
+.Project__box__header {
   margin-bottom: 1rem;
   padding-left: 1.8rem;
   font-weight: bold;
@@ -69,20 +71,20 @@
   letter-spacing: 1px;
 }
 
-.project__box__line {
+.Project__box__line {
   width: 100%;
   height: 1px;
-  background-color: #ff5c7d;
+  background-color: $punch;
   margin-bottom: 1.2rem;
 }
 
-.project__box__subheader {
+.Project__box__subheader {
   padding-left: 1.8rem;
   margin: 1.5rem 0 .5rem;
   font-weight: bold;
 }
 
-.project__box__text {
+.Project__box__text {
   max-width: 80%;
   padding-left: 1.8rem;
   font-weight: 300;

@@ -1,0 +1,93 @@
+@import 'colors';
+
+::selection {
+  background-color: #ff8aa1;
+}
+
+.AboutPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 4.5rem);
+  padding-top: 4.5rem;
+  background-color: $onyx;
+}
+
+.AboutPage__circuit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 60rem;
+  padding: 5rem 4rem;
+  border: 1px solid $punch;
+  border-radius: 2px;
+  color: $cloud;
+  font-size: 15px;
+}
+
+.AboutPage__circuit__battery {
+  position: absolute;
+  width: 1rem;
+  border-left: 1px solid $punch;
+  background-color: $onyx;
+
+  &--1 {
+    top: -1rem;
+    left: 8rem;
+    height: 2rem;
+  }
+
+  &--2 {
+    top: -0.5rem;
+    left: 9rem;
+    height: 1rem;
+  }
+}
+
+.AboutPage__circuit__column {
+  margin-right: 4rem;
+}
+
+.AboutPage__circuit__column__answer {
+  margin-bottom: 1rem;
+  max-width: 18rem;
+  font-weight: 300;
+  line-height: 1.2;
+
+  &--link {
+    text-decoration: underline;
+    transition: 0.37s;
+
+    &:hover {
+      color: $punch;
+    }
+  }
+}
+
+.AboutPage__circuit__column__question {
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.AboutPage__circuit__resume-button {
+  position: absolute;
+  bottom: -2rem;
+  right: 8rem;
+  padding: 1.4rem;
+  background-color: $onyx;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  font-weight: 300;
+  color: $punch;
+  cursor: pointer;
+  transition: 0.37s;
+
+  &:hover {
+    background-color: $punch;
+    color: $onyx;
+  }
+}

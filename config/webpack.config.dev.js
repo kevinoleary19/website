@@ -107,6 +107,10 @@ module.exports = {
         test: /\.css$/,
         loader: 'style!css!postcss'
       },
+      {
+        test: /\.scss$/,
+        loader: 'style!css!postcss!sass'
+      },
       // JSON is not enabled by default in Webpack but both Node and Browserify
       // allow it implicitly so we also enable it.
       {
@@ -153,6 +157,9 @@ module.exports = {
         }
       }
     ]
+  },
+  sassLoader: {
+    includePaths: [ `src/shared-styles` ]
   },
   // Point ESLint to our predefined config.
   eslint: {

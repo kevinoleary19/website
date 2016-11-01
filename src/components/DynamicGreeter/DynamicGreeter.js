@@ -1,12 +1,12 @@
 import React, { PropTypes } from 'react';
 
-import './DynamicGreeter.css';
+import './DynamicGreeter.scss';
 
 const DynamicGreeter = (props) => (
-  <section className="dynamic-greeter">
-    <p className="dynamic-greeter__text">
+  <section className="DynamicGreeter">
+    <p className="DynamicGreeter__text">
       Hi! I'm Kevin, a full stack developer <br></br> who loves
-      <span className="dynamic-greeter__text--highlight">
+      <span className="DynamicGreeter__text--highlight">
         { props.currentHobby }
       </span>
     </p>

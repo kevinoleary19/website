@@ -1,11 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 
-import './Bars.css';
-
+import './Bars.scss';
 
 export default class Bars extends Component {
   static propTypes = {
-      currentHobby: PropTypes.string.isRequired
+    currentHobby: PropTypes.string.isRequired
   }
 
   constructor(props) {
@@ -67,7 +66,6 @@ export default class Bars extends Component {
     }
   }
 
-
   // height generators
   // ---------------------------------------------------------------------------
   landscapeGenerator(x) {
@@ -95,10 +93,10 @@ export default class Bars extends Component {
 
   render() {
     return (
-      <section className="bars">
+      <section className="Bars">
         {this.state.bars.map((bar, index) =>
           <div
-            className="bar"
+            className="Bars__bar"
             style={{
               backgroundColor: bar.color,
               transform: `scaleY(${bar.height})`
