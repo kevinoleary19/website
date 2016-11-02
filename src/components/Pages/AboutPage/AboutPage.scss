@@ -1,3 +1,4 @@
+@import 'breakpoints';
 @import 'colors';
 
 ::selection {
@@ -9,52 +10,63 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: calc(100vh - 4.5rem);
-  padding-top: 4.5rem;
+  width: 100vw;
+  min-height: calc(100vh - 65px);
+  padding-top: 65px;
   background-color: $onyx;
 }
 
 .AboutPage__circuit {
   position: relative;
   display: flex;
-  align-items: center;
+  flex-flow: wrap;
+  align-items: baseline;
+  justify-content: center;
   box-sizing: border-box;
   width: 80%;
-  max-width: 60rem;
-  padding: 5rem 4rem;
+  max-width: 800px;
+  padding: 50px 40px;
   border: 1px solid $punch;
   border-radius: 2px;
   color: $cloud;
   font-size: 15px;
+
+  @media(min-width: $breakpoint-tablet) {
+    justify-content: flex-start;
+  }
 }
 
 .AboutPage__circuit__battery {
   position: absolute;
-  width: 1rem;
+  width: 14px;
   border-left: 1px solid $punch;
   background-color: $onyx;
 
   &--1 {
-    top: -1rem;
-    left: 8rem;
-    height: 2rem;
+    top: -14px;
+    left: 80px;
+    height: 28px;
   }
 
   &--2 {
-    top: -0.5rem;
-    left: 9rem;
-    height: 1rem;
+    top: -7px;
+    left: 90px;
+    height: 14px;
   }
 }
 
 .AboutPage__circuit__column {
-  margin-right: 4rem;
+  min-width: 200px;
+
+  @media(min-width: 820px) {
+    justify-content: flex-start;
+    margin-left: 40px;
+  }
 }
 
 .AboutPage__circuit__column__answer {
-  margin-bottom: 1rem;
-  max-width: 18rem;
+  margin-bottom: 20px;
+  max-width: 180px;
   font-weight: 300;
   line-height: 1.2;
 
@@ -75,9 +87,8 @@
 
 .AboutPage__circuit__resume-button {
   position: absolute;
-  bottom: -2rem;
-  right: 8rem;
-  padding: 1.4rem;
+  bottom: -20px;
+  padding: 14px;
   background-color: $onyx;
   border: 1px solid currentColor;
   border-radius: 2px;
@@ -89,5 +100,9 @@
   &:hover {
     background-color: $punch;
     color: $onyx;
+  }
+
+  @media(min-width: $breakpoint-tablet) {
+    right: 80px;
   }
 }

@@ -20,11 +20,6 @@ const Navbar = () => (
         Me
       </Link>
     </div>
-    <div className="Navbar__item">
-      <Link href="/r">
-        404
-      </Link>
-    </div>
   </div>
 );
 

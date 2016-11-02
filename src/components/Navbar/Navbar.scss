@@ -1,22 +1,25 @@
+@import 'breakpoints';
 @import 'colors';
+@import 'z-index';
 
 .Navbar {
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 100;
-  width: 100%;
-  height: 4.5rem;
+  z-index: $navbar;
+  width: 100vw;
+  height: 65px;
   font-family: 'Moon';
   background-color: $onyx;
 }
 
 .Navbar__item {
   position: relative;
-  margin: 0 2rem;
-  letter-spacing: 2px;
+  margin: 0 20px;
   color: $punch;
+  font-size: 16px;
+  letter-spacing: 2px;
   cursor: pointer;
   transition: 0.2s;
 
@@ -36,5 +39,10 @@
     opacity: 0;
     cursor: default;
     transition: 0.2s;
+  }
+
+  @media(min-width: $breakpoint-tablet) {
+    margin: 0 20px;
+    font-size: 18px;
   }
 }
