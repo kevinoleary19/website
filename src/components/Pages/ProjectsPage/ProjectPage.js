@@ -12,12 +12,9 @@ const ProjectPage = () => (
     {
       projects.map((project, index) =>
         <Project
-          styleName={project.class}
-          description={project.description}
-          header={project.header}
-          imageLeft={index % 2 === 0}
           key={index}
-          technology={project.technology}
+          imageLeft={index % 2 === 0}
+          {...project}
         />
       )
     }

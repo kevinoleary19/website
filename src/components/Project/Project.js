@@ -3,10 +3,10 @@ import React, { PropTypes } from 'react';
 import './Project.scss';
 import { isMobile } from '../../utils/browser';
 
-const Project = ({styleName, description, header, imageLeft, technology}) => {
+const Project = ({ imageLeft, header, style, description, technology, src}) => {
   const mobile = (
-    <div className={`Project ${styleName}`}>
-      <div className="Project__image" />
+    <div className={`Project ${style}`}>
+      <img className="Project__image" src={src} alt={'image'}/>
       <div className="Project__summary">
         <h1 className="Project__header">
           { header }
@@ -28,7 +28,7 @@ const Project = ({styleName, description, header, imageLeft, technology}) => {
   );
 
   const desktop = (
-    <div className={`Project ${styleName}`}>
+    <div className={`Project ${style}`}>
       <div className="Project__circle" />
       <div
         className="Project__image"
