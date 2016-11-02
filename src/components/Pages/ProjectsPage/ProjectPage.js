@@ -7,8 +7,8 @@ import Project from '../../Project/Project';
 const ProjectPage = () => (
   <section className="ProjectPage">
     <div className="ProjectPage__divider" />
-    <div className="ProjectPage__divider-box--top" />
-    <div className="ProjectPage__divider-box--bottom" />
+    <div className="ProjectPage__divider-box ProjectPage__divider-box--top" />
+    <div className="ProjectPage__divider-box ProjectPage__divider-box--bottom" />
     {
       projects.map((project, index) =>
         <Project

@@ -1,15 +1,25 @@
+@import 'breakpoints';
 @import 'colors';
 
 .Project {
   position: relative;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12rem;
+  color: $cloud;
 
   &--datepicker {
     margin-top: 6rem;
   }
+
+  @media(min-width: $breakpoint-tablet) {
+    display: flex;
+    margin-bottom: 12rem;
+  }
+}
+
+.Project--datepicker {
+  margin-top: 5rem;
 }
 
 .Project--datepicker .Project__box {
@@ -18,6 +28,15 @@
 
 .Project--nusci-mag .Project__box {
   margin-top: 1.2rem;
+}
+
+.Project__box {
+  width: 24rem;
+  color: $cloud;
+
+  &--datepicker {
+    margin-top: 1.4rem;
+  }
 }
 
 .Project__circle {
@@ -34,24 +53,44 @@
   background-color: $onyx;
 }
 
-.Project--datepicker {
-  margin-top: 5rem;
-}
+.Project__header {
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: $sherbert;
 
-.Project__box {
-  width: 24rem;
-  color: $cloud;
-
-  &--datepicker {
-    margin-top: 1.4rem;
+  @media(min-width: $breakpoint-tablet) {
+    display: block;
+    padding-left: 1.8rem;
   }
 }
 
 .Project__image {
-  width: 18rem;
-  height: 18rem;
-  border: 1px solid $punch;
+  box-sizing: border-box;
+  width: calc(100% + 28px);
+  height: 240px;
+  margin: 0 auto 24px;
+  margin-left: -14px;
   background-color: $cloud;
+
+  @media(min-width: $breakpoint-tablet) {
+    border: 1px solid $punch;
+    width: 100%;
+  }
+}
+
+.Project__line {
+  height: 10px;
+  width: calc(100% + 28px);
+  background-color: $sherbert;
+  margin: 60px auto 0;
+  margin-left: -14px;
+
+  @media(min-width: $breakpoint-tablet) {
+    margin: 20px 0;
+    width: 100%;
+  }
 }
 
 .Project__middle {
@@ -63,30 +102,30 @@
   border-right: 1px solid $punch;
 }
 
-.Project__box__header {
-  margin-bottom: 1rem;
-  padding-left: 1.8rem;
+.Project__subheader {
+  margin-bottom: 8px;
   font-weight: bold;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
+  color: $sherbert;
+
+  @media(min-width: $breakpoint-tablet) {
+    padding-left: 1.8rem;
+  }
 }
 
-.Project__box__line {
-  width: 100%;
-  height: 1px;
-  background-color: $punch;
-  margin-bottom: 1.2rem;
+.Project__summary {
+  padding-left: 16px;
 }
 
-.Project__box__subheader {
-  padding-left: 1.8rem;
-  margin: 1.5rem 0 .5rem;
-  font-weight: bold;
-}
-
-.Project__box__text {
+.Project__text {
   max-width: 80%;
-  padding-left: 1.8rem;
   font-weight: 300;
   line-height: 1.3;
+
+  &--summary {
+    margin-bottom: 24px;
+  }
+
+  @media(min-width: $breakpoint-tablet) {
+    padding-left: 1.8rem;
+  }
 }

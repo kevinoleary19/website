@@ -1,3 +1,4 @@
+@import 'breakpoints';
 @import 'colors';
 
 ::selection {
@@ -7,19 +8,26 @@
 .ProjectPage {
   position: relative;
   background-color: $onyx;
-  padding-top: 4.5rem;
+  padding: 65px 14px 0 14px;
   overflow: hidden;
 }
 
 .ProjectPage__divider {
+  display: none;
   position: absolute;
   height: 100%;
   width: 1px;
   background-color: $punch;
   left: 50%;
+
+  @media(min-width: $breakpoint-tablet) {
+    display: block;
+  }
 }
 
 .ProjectPage__divider-box {
+  display: none;
+
   &--bottom {
     position: absolute;
     bottom: 0;
@@ -42,5 +50,9 @@
     height: 3.5rem;
     border-bottom: 1px solid $punch;
     background-color: $onyx;
+  }
+
+  @media(min-width: $breakpoint-tablet) {
+    display: block;
   }
 }
