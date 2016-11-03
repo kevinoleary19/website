@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   padding-top: $nav-height;
   background-color: $onyx;
@@ -23,9 +23,9 @@
   flex-flow: wrap;
   align-items: baseline;
   justify-content: center;
-  box-sizing: border-box;
   width: 80%;
   max-width: 800px;
+  margin: 20px 0 40px;
   padding: 50px 40px;
   border: 1px solid $punch;
   border-radius: 2px;

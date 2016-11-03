@@ -5,9 +5,11 @@ import './AboutPage.scss'
 const AboutPage = () => (
     <section className="AboutPage">
       <div className="AboutPage__circuit">
-        <div className="AboutPage__circuit__resume-button">
-          Download Resume
-        </div>
+        <a href={process.env.PUBLIC_URL + 'resume.pdf'} target='_blank'>
+          <div className="AboutPage__circuit__resume-button">
+            View Resume
+          </div>
+        </a>
         <div className="AboutPage__circuit__battery AboutPage__circuit__battery--1" />
         <div className="AboutPage__circuit__battery AboutPage__circuit__battery--2" />
         <div className="AboutPage__circuit__column">

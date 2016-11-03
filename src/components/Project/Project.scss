@@ -58,7 +58,8 @@
   font-weight: bold;
   font-size: 1.5rem;
   letter-spacing: 1px;
-  color: $sherbert;
+  color: $punch;
+
 
   @media(min-width: $breakpoint-tablet) {
     display: block;
@@ -81,9 +82,12 @@
 }
 
 .Project__line {
-  height: 6px;
+  height: 12px;
   width: calc(100% + 28px);
-  background-color: $sherbert;
+  background-color: $cloud;
+  border: 1px solid $punch;
+  border-left: 0;
+  border-right: 0;
   margin: 60px auto 0;
   margin-left: -14px;
 
@@ -105,7 +109,7 @@
 .Project__subheader {
   margin-bottom: 8px;
   font-weight: bold;
-  color: $sherbert;
+  color: $punch;
 
   @media(min-width: $breakpoint-tablet) {
     padding-left: 1.8rem;
