@@ -1,4 +1,6 @@
+@import 'breakpoints';
 @import 'colors';
+@import 'sizes';
 
 .NotFoundPage {
   display: flex;
@@ -6,20 +8,24 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: calc(100vh - 6rem);
-  padding-top: 6rem;
+  height: 100vh;
   background-color: $onyx;
 }
 
 .NFP__404 {
-  width: 14rem;
-  padding: 1rem;
-  margin-bottom: 6rem;
+  width: 160px;
+  padding: 16px;
+  margin-top: 40px;
   border-bottom: 1px solid $cloud;
-  font-size: 3.6rem;
+  font-size: 56px;
   color: $cloud;
   background-color: $onyx;
   text-align: center;
+
+  @media(min-width: $breakpoint-tablet) {
+    width: 224px;
+    margin-bottom: 96px;
+  }
 }
 
 .NFP__box {
@@ -28,13 +34,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -4rem;
-  padding: 1rem 2rem 2.4rem;
+  padding: 16px 32px 36px;
 }
 
 .NFP__button {
-  box-sizing: border-box;
-  padding: 1.2rem;
+  margin-top: 80px;
+  padding: 18px;
   color: $punch;
   border: 1px solid $punch;
   border-radius: 3px;
@@ -49,21 +54,26 @@
 }
 
 .NFP__text {
-  margin-bottom: 4rem;
-  padding: 2rem;
-  font-size: 1.2rem;
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.7;
   border-radius: 3px;
   color: $cloud;
   background-color: $onyx;
+
+  @media(min-width: $breakpoint-tablet) {
+    padding: 32px;
+    font-size: 18px;
+    line-height: 1.8;
+  }
 }
 
 .star-container {
   position: absolute;
   width: 100%;
   height: 100%;
-  margin-top: -4rem;
   overflow: hidden;
 }
 

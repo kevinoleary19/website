@@ -1,11 +1,12 @@
 @import 'colors';
+@import 'sizes';
 
 .DynamicGreeter {
-  padding-top: calc(((100vh - 65px) / 2) - 65px);
+  padding-top: calc(((100vh - #{$nav-height}) / 2) - #{$nav-height});
   font-weight: 300;
 
   @media(min-width: 667px) {
-    padding-top: calc(((100vh - 65px) / 2) - 130px);
+    padding-top: calc(((100vh - #{$nav-height}) / 2) - 130px);
   }
 }
 

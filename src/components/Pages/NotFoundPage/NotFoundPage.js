@@ -2,21 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-component';
 
 import './NotFoundPage.scss';
+import { isMobile } from '../../../utils/browser';
 
 function NotFoundPage()  {
   const stars = [];
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 100; i++) {
     stars.push({
       size: Math.ceil(Math.random() * 5),
       x: Math.ceil(Math.random() * 100),
-      y: Math.ceil(Math.random() * 50)
+      y: Math.ceil(Math.random() * 65)
     });
   }
+
+  const textBreak = isMobile ? null : <br />;
 
   return (
     <section className="NotFoundPage">
       <div className="star-container">
-        { stars.map((star, index) =>
+        {stars.map((star, index) =>
             <div
               className="star-container__star"
               style={{
@@ -34,8 +37,8 @@ function NotFoundPage()  {
           404
         </div>
         <div className="NFP__text">
-          Oh no! You've tried looking for something that <br />
-          doesn't exist. A true absurdist at heart.
+          Oh no! You've tried looking for something that { textBreak }
+          doesn't exist. A true absurdist at heart
         </div>
         <div className="NFP__button">
           <Link href="/">

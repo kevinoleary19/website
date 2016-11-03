@@ -1,5 +1,6 @@
 @import 'breakpoints';
 @import 'colors';
+@import 'sizes';
 
 ::selection {
   background-color: #ff8aa1;
@@ -8,7 +9,7 @@
 .ProjectPage {
   position: relative;
   background-color: $onyx;
-  padding: 65px 14px 0 14px;
+  padding: $nav-height 14px 0 14px;
   overflow: hidden;
 }
 

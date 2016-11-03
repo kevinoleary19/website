@@ -1,5 +1,6 @@
 @import 'breakpoints';
 @import 'colors';
+@import 'sizes';
 @import 'z-index';
 
 .Navbar {
@@ -9,7 +10,7 @@
   justify-content: center;
   z-index: $navbar;
   width: 100vw;
-  height: 65px;
+  height: $nav-height;
   font-family: 'Moon';
   background-color: $onyx;
 }
