@@ -1,6 +1,8 @@
+// @flow
 import React from 'react';
 
 import './ProjectPage.scss';
+import { ProjectType } from '../../../types/types';
 import { projects } from '../../../data/data';
 import Project from '../../Project/Project';
 
@@ -10,7 +12,7 @@ const ProjectPage = () => (
     <div className="ProjectPage__divider-box ProjectPage__divider-box--top" />
     <div className="ProjectPage__divider-box ProjectPage__divider-box--bottom" />
     {
-      projects.map((project, index) =>
+      projects.map((project: ProjectType, index: number) =>
         <Project
           key={index}
           imageLeft={index % 2 === 0}

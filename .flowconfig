@@ -1,0 +1,6 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/fbjs/.*
+
+[options]
+module.name_mapper.extension='scss' -> '/Users/kevinoleary/Coding/website/flow/stubs/css-modules.js'
+module.name_mapper='.*\.\(svg\|png\|jpg\|gif\)$' -> '/Users/kevinoleary/Coding/website/flow/stubs/url-loader.js'

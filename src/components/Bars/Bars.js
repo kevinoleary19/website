@@ -1,20 +1,31 @@
-import React, { Component, PropTypes } from 'react';
+// @flow
+import React, { Component } from 'react';
 
 import './Bars.scss';
 
+type Bar = {
+  color: string,
+  height: number
+}
+
+type Props = {
+  currentHobby: string
+}
+
 export default class Bars extends Component {
-  static propTypes = {
-    currentHobby: PropTypes.string.isRequired
+  props: Props;
+  state: {
+    bars: Array<Bar>
   }
 
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
     this.state = {
       bars: this.createBars()
     };
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: Props) {
     if (nextProps.currentHobby) {
       this.modifyBars(nextProps.currentHobby);
     }
@@ -38,8 +49,8 @@ export default class Bars extends Component {
 
   // state management
   // ---------------------------------------------------------------------------
-  modifyBars(newHobby) {
-    const { bars } = this.state;
+  modifyBars(newHobby: string) {
+    const { bars }: {bars: Array<Bar>} = this.state;
 
     let generator;
     switch (newHobby) {
@@ -61,32 +72,32 @@ export default class Bars extends Component {
     }
 
     for (let i = 0; i < bars.length; i++) {
-      const bar = bars[i];
+      const bar: Bar = bars[i];
       bar.height = generator(i);
     }
   }
 
   // height generators
   // ---------------------------------------------------------------------------
-  landscapeGenerator(x) {
+  landscapeGenerator(x: number) {
     return [75, 60, 107, 107, 49, 76, 76, 89, 61, 35, 35, 85, 85, 96][x];
   }
 
-  investingGenerator(x) {
+  investingGenerator(x: number) {
     return [12, 11, 17, 34, 25, 28, 45, 47, 67, 45, 51, 68, 83, 83][x];
   }
 
-  sinGenerator(x, numBars = 12) {
+  sinGenerator(x: number, numBars: number = 12) {
     const deviation = 35;
     const yOffset = 50;
     return Math.round(deviation * Math.sin(Math.PI * x / ((numBars - 1) / 2)) + yOffset);
   }
 
-  statisticsGenerator(x, distribution) {
+  statisticsGenerator(x: number) {
     return [0.5, 1, 2, 12, 35, 66, 90, 90, 66, 35, 12, 2, 1, 0.5][x];
   }
 
-  randomGenerator(x) {
+  randomGenerator(x: number) {
     return Math.round(Math.random() * 100);
   }
   // ---------------------------------------------------------------------------
@@ -94,7 +105,7 @@ export default class Bars extends Component {
   render() {
     return (
       <section className="Bars">
-        {this.state.bars.map((bar, index) =>
+        {this.state.bars.map((bar: Bar, index: number) =>
           <div
             className="Bars__bar"
             style={{

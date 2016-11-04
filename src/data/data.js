@@ -1,19 +1,19 @@
+// @flow
 import cognition from '../images/cognition.png';
 import datepicker from '../images/datepicker.png';
 import igem from '../images/igem.png';
 import nusci from '../images/nusci-cover.png';
 
-export const projects = [
+import { ProjectType } from '../types/types';
+
+export const projects: Array<ProjectType> = [
   {
     header: "Angular 2 Datepicker",
     style: "project--datepicker",
     description: "An opensource datepicker library made for the front end web " +
                   "framework Angular 2. Inspired by Google’s material design.",
     technology: ["Angular 2", "Typescript"],
-    image: {
-      src: datepicker,
-      alt: "Angular 2 Datepicker"
-    }
+    src: datepicker
   },
   {
     header: "Cognition Lab Website",
@@ -22,10 +22,7 @@ export const projects = [
                   "that handled creating and modifying user objects to store " +
                   "answers to videos and other psychological tests.",
     technology: ["Ruby on Rails", "Coffeescript"],
-    image: {
-      src: cognition,
-      alt: "Cognition Lab Website"
-    }
+    src: cognition
   },
   {
     header: "NUSCI Magazine",
@@ -33,10 +30,7 @@ export const projects = [
     description: "Head designer for Northestern University science magazine. " +
                   "Led rebrand of magazine and oversaw team of 6 designers.",
     technology: ["Adobe Indesign", "Adobe Illustrator", "Adobe Photoshop"],
-    image: {
-      src: nusci,
-      alt: "NUSCI Magazine"
-    }
+    src: nusci
   },
   {
     header: "NUSCI Website",
@@ -44,19 +38,13 @@ export const projects = [
     description: "Website for NUSCI magazine to publish content" +
                   "and give brand online presence.",
     technology: ["Wordpress", "Unix", "PHP"],
-    image: {
-      src: nusci,
-      alt: "NUSCI Website"
-    }
+    src: nusci
   },
   {
     header: "IGEM 2015 Website",
     style: "project--igem",
     description: "Website for Northeastern University's 2015 IGEM team.",
     technology: ["jQuery", "CSS", "HTML"],
-    image: {
-      src: igem,
-      alt: "IGEM 2015 Website"
-    }
+    src: igem
   }
 ];

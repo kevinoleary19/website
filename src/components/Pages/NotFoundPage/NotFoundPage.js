@@ -1,16 +1,23 @@
+// @flow
 import React from 'react';
 import { Link } from 'react-router-component';
 
 import './NotFoundPage.scss';
 import { isMobile } from '../../../utils/browser';
 
+type Star = {
+  size: number,
+  x: number,
+  y: number
+}
+
 function NotFoundPage()  {
-  const stars = [];
-  for (let i = 0; i < 100; i++) {
+  const stars: Array<Star> = [];
+  for (let i = 0; i < 200; i++) {
     stars.push({
-      size: Math.ceil(Math.random() * 5),
+      size: Math.ceil(Math.random() * 6),
       x: Math.ceil(Math.random() * 100),
-      y: Math.ceil(Math.random() * 65)
+      y: Math.ceil(Math.random() * 40)
     });
   }
 
@@ -19,7 +26,7 @@ function NotFoundPage()  {
   return (
     <section className="NotFoundPage">
       <div className="star-container">
-        {stars.map((star, index) =>
+        {stars.map((star: Star, index: number) =>
             <div
               className="star-container__star"
               style={{

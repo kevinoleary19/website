@@ -1,12 +1,14 @@
-import React, { PropTypes } from 'react';
+// @flow
+import React from 'react';
 
 import './Project.scss';
 import { isMobile } from '../../utils/browser';
+import { ProjectType, Technology } from '../../types/types';
 
-const Project = ({ imageLeft, header, style, description, technology, image}) => {
+const Project = ({ imageLeft, header, style, description, technology, src}: ProjectType) => {
   const mobile = (
     <div className={`Project ${style}`}>
-      <img className="Project__image" src={image.src} alt={image.alt}/>
+      <img className="Project__image" src={src} alt={header}/>
       <div className="Project__summary">
         <h1 className="Project__header">
           { header }
@@ -17,7 +19,7 @@ const Project = ({ imageLeft, header, style, description, technology, image}) =>
         <p className="Project__subheader">
           Technology Used
         </p>
-        { technology.map((technology, index) => (
+        { technology.map((technology: Technology, index: number) => (
           <p className="Project__text" key={index}>
             { technology }
           </p>
@@ -52,7 +54,7 @@ const Project = ({ imageLeft, header, style, description, technology, image}) =>
         <p className="Project__box__subheader">
           Technology Used
         </p>
-        { technology.map((technology, index) => (
+        { technology.map((technology: Technology, index: number) => (
           <p className="Project__box__text" key={index}>
             { technology }
           </p>
@@ -63,16 +65,5 @@ const Project = ({ imageLeft, header, style, description, technology, image}) =>
 
   return isMobile ? mobile : desktop;
 };
-
-Project.propTypes = {
-  header: PropTypes.string,
-  imageLeft: PropTypes.bool,
-  description: PropTypes.string,
-  technology: PropTypes.array,
-  src: PropTypes.shape({
-    src: PropTypes.string,
-    alt: PropTypes.string
-  })
-}
 
 export default Project;
