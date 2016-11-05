@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { Link } from 'react-router-component';
+import Link from 'react-router/Link';
 
 import './NotFoundPage.scss';
 import { isMobile } from '../../../utils/browser';
@@ -48,7 +48,7 @@ function NotFoundPage()  {
           doesn't exist. A true absurdist at heart
         </div>
         <div className="NFP__button">
-          <Link href="/">
+          <Link to="/">
             Return to Normalcy
           </Link>
         </div>

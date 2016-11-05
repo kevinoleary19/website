@@ -1,6 +1,8 @@
 // @flow
 import React from 'react';
-import { Location, Locations, NotFound } from 'react-router-component';
+import Router from 'react-router/BrowserRouter';
+import Match from 'react-router/Match';
+import Miss from 'react-router/Miss';
 
 import './App.scss';
 import AboutPage from './components/Pages/AboutPage/AboutPage';
@@ -10,15 +12,15 @@ import NotFoundPage from './components/Pages/NotFoundPage/NotFoundPage';
 import ProjectPage from './components/Pages/ProjectsPage/ProjectPage';
 
 const App = () => (
-  <div className="app">
-    <Navbar/>
-    <Locations>
-      <Location path='/' handler={ HomePage }/>
-      <Location path='/about' handler={ AboutPage }/>
-      <Location path="/projects" handler={ ProjectPage }/>
-      <NotFound handler={ NotFoundPage }/>
-    </Locations>
-  </div>
+  <Router>
+    <div className="app">
+      <Navbar/>
+      <Match exactly pattern="/" component={ HomePage }/>
+      <Match pattern="/about" component={ AboutPage }/>
+      <Match pattern="/projects" component={ ProjectPage }/>
+      <Miss component={ NotFoundPage }/>
+    </div>
+  </Router>
 );
 
 export default App;
