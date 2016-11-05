@@ -4,5 +4,7 @@ export type ProjectType = {
   header: string,
   description: string,
   technology: Technology,
-  src: string
+  src: string,
+  githubLink?: string,
+  webLink?: string
 }

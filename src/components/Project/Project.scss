@@ -15,7 +15,7 @@
   }
 }
 
-.Project__box {
+.Project__description {
   z-index: $project-box;
   min-width: 384px;
   width: 384px;
@@ -36,39 +36,48 @@
 }
 
 .Project__header {
+  display: flex;
+  align-items: center;
   margin-bottom: 16px;
   font-weight: bold;
   font-size: 24px;
   letter-spacing: 1px;
   background-color: $onyx;
-  color: $punch;
+  color: $white;
 
   @media(min-width: $breakpoint-tablet) {
-    display: block;
     margin: 0 -2px 0 -2px;
     padding: 0 0 16px 30px;
   }
 }
 
+.Project__header-icon {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
 .Project__image {
   box-sizing: border-box;
   width: calc(100% + 28px);
-  height: 240px;
+  height: auto;
   margin: 0 auto 24px;
   margin-left: -14px;
   background-color: $cloud;
 
   @media(min-width: $breakpoint-tablet) {
     width: 360px;
+    height: 240px;
     margin: 0;
   }
 }
 
 .Project__line {
-  height: 12px;
+  height: 14px;
   width: calc(100% + 28px);
   background-color: $cloud;
-  border: 1px solid $punch;
   border-left: 0;
   border-right: 0;
   margin: 60px auto 0;
@@ -76,6 +85,7 @@
 
   @media(min-width: $breakpoint-tablet) {
     height: 1px;
+    border: 1px solid $punch;
     border-top: 0;
     margin: 0 0 20px 0;
     width: 100%;
@@ -83,6 +93,9 @@
 }
 
 .Project__middle {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
   order: 2;
   width: 256px;
   height: 100px;
@@ -91,10 +104,21 @@
   border-right: 1px solid $punch;
 }
 
+.Project__middle__frame {
+  height: 258px;
+  width: 1px;
+  border: 1px solid $punch;
+  position: absolute;
+  top: -29px;
+  width: 120px;
+  left: -120px;
+  border-left: 0;
+}
+
 .Project__subheader {
   margin-bottom: 8px;
   font-weight: bold;
-  color: $punch;
+  color: $white;
 
   @media(min-width: $breakpoint-tablet) {
     padding-left: 1.8rem;
@@ -111,7 +135,7 @@
   line-height: 1.3;
 
   &--summary {
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
 
   @media(min-width: $breakpoint-tablet) {

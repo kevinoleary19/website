@@ -1,8 +1,8 @@
 // @flow
-import cognition from '../images/cognition.png';
-import datepicker from '../images/datepicker.png';
-import igem from '../images/igem.png';
-import nusci from '../images/nusci-cover.png';
+import cognition from '../new-images/cognition.png';
+import datepicker from '../new-images/datepicker.png';
+import igem from '../new-images/igem.png';
+import nusci from '../new-images/nusci-cover.png';
 
 import { ProjectType } from '../types/types';
 
@@ -12,7 +12,8 @@ export const projects: Array<ProjectType> = [
     description: "An opensource datepicker library made for the front end web " +
                   "framework Angular 2. Inspired by Google’s material design.",
     technology: ["Angular 2", "Typescript"],
-    src: datepicker
+    src: datepicker,
+    githubLink: "https://github.com/koleary94/Angular-2-Datepicker"
   },
   {
     header: "Cognition Lab Website",
@@ -20,7 +21,8 @@ export const projects: Array<ProjectType> = [
                   "Handled creating and modifying user objects to store " +
                   "answers to videos and other psychological tests.",
     technology: ["Ruby on Rails", "Coffeescript"],
-    src: cognition
+    src: cognition,
+    githubLink: "https://github.com/koleary94/CognitionLab"
   },
   {
     header: "NUSCI Magazine",
@@ -30,16 +32,18 @@ export const projects: Array<ProjectType> = [
     src: nusci
   },
   {
+    header: "IGEM 2015 Website",
+    description: "Website for Northeastern University's 2015 IGEM team.",
+    technology: ["jQuery", "CSS", "HTML"],
+    src: igem,
+    githubLink: null,
+    webLink: "http://2015.igem.org/Team:Northeastern_Boston"
+  },
+  {
     header: "NUSCI Website",
     description: "Website for NUSCI magazine to publish content" +
                   "and give brand online presence.",
     technology: ["Wordpress", "Unix", "PHP"],
     src: nusci
-  },
-  {
-    header: "IGEM 2015 Website",
-    description: "Website for Northeastern University's 2015 IGEM team.",
-    technology: ["jQuery", "CSS", "HTML"],
-    src: igem
   }
 ];
