@@ -16,6 +16,7 @@ const ProjectPage = () => (
         <Project
           key={index}
           imageLeft={index % 2 === 0}
+          last={index === projects.length - 1}
           {...project}
         />
       )

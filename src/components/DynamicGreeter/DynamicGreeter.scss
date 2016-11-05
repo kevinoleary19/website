@@ -20,4 +20,8 @@
     margin-left: 6px;
     color: $punch;
   }
+
+  @media(min-width: 667px) {
+    font-size: 20px;
+  }
 }

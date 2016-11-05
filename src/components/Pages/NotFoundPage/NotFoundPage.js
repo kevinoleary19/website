@@ -13,9 +13,9 @@ type Star = {
 
 function NotFoundPage()  {
   const stars: Array<Star> = [];
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < 300; i++) {
     stars.push({
-      size: Math.ceil(Math.random() * 6),
+      size: Math.ceil(Math.random() * 5),
       x: Math.ceil(Math.random() * 100),
       y: Math.ceil(Math.random() * 40)
     });

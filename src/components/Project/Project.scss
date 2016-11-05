@@ -1,5 +1,6 @@
 @import 'breakpoints';
 @import 'colors';
+@import 'z-index';
 
 .Project {
   position: relative;
@@ -8,62 +9,44 @@
   justify-content: center;
   color: $cloud;
 
-  &--datepicker {
-    margin-top: 6rem;
-  }
-
   @media(min-width: $breakpoint-tablet) {
     display: flex;
-    margin-bottom: 12rem;
+    margin-top: 180px;
   }
-}
-
-.Project--datepicker {
-  margin-top: 5rem;
-}
-
-.Project--datepicker .Project__box {
-  margin-top: 1.2rem;
-}
-
-.Project--nusci-mag .Project__box {
-  margin-top: 1.2rem;
 }
 
 .Project__box {
-  width: 24rem;
+  z-index: $project-box;
+  min-width: 384px;
+  width: 384px;
   color: $cloud;
-
-  &--datepicker {
-    margin-top: 1.4rem;
-  }
 }
 
 .Project__circle {
-  z-index: 1;
+  z-index: $project-circle;
   position: absolute;
   top: 50%;
-  margin-top: -0.7rem;
-  margin-left: 0.07rem;
   width: 50%;
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
   border: 1px solid $punch;
-  border-radius: 2rem;
+  border-radius: 20px;
   background-color: $onyx;
 }
 
 .Project__header {
   margin-bottom: 16px;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 24px;
   letter-spacing: 1px;
+  background-color: $onyx;
   color: $punch;
-
 
   @media(min-width: $breakpoint-tablet) {
     display: block;
-    padding-left: 1.8rem;
+    margin: 0 -2px 0 -2px;
+    padding: 0 0 16px 30px;
   }
 }
 
@@ -76,8 +59,8 @@
   background-color: $cloud;
 
   @media(min-width: $breakpoint-tablet) {
-    border: 1px solid $punch;
-    width: 100%;
+    width: 360px;
+    margin: 0;
   }
 }
 
@@ -92,16 +75,18 @@
   margin-left: -14px;
 
   @media(min-width: $breakpoint-tablet) {
-    margin: 20px 0;
+    height: 1px;
+    border-top: 0;
+    margin: 0 0 20px 0;
     width: 100%;
   }
 }
 
 .Project__middle {
   order: 2;
-  width: 16rem;
-  height: 4rem;
-  margin-top: -4rem;
+  width: 256px;
+  height: 100px;
+  margin-bottom: 100px;
   border-bottom: 1px solid $punch;
   border-right: 1px solid $punch;
 }

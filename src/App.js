@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from 'react';
+import React from 'react';
 import { Location, Locations, NotFound } from 'react-router-component';
 
 import './App.scss';

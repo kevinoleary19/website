@@ -80,7 +80,7 @@ export default class Bars extends Component {
   // height generators
   // ---------------------------------------------------------------------------
   landscapeGenerator(x: number) {
-    return [75, 60, 107, 107, 49, 76, 76, 89, 61, 35, 35, 85, 85, 96][x];
+    return [96, 85, 85, 35, 35, 61, 89, 76, 76, 49, 107, 107, 60, 75][x];
   }
 
   investingGenerator(x: number) {
