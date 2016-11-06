@@ -5,6 +5,8 @@ import Bars from '../../Bars/Bars';
 import DynamicGreeter from '../../DynamicGreeter/DynamicGreeter';
 import './HomePage.scss';
 
+// import MatchAnimate from '../../HigherOrderComponents/MatchAnimate';
+
 export default class HomePage extends Component {
   changeInterval: number;
   hobbies: Array<string>;
@@ -39,6 +41,10 @@ export default class HomePage extends Component {
 
   render() {
     const { currentHobby } = this.state;
+
+    // const electric = <div className="test">Electric Bugaloo</div>;
+    // const HomeRoute = MatchAnimate(electric);
+
     return (
       <section className="HomePage">
         <DynamicGreeter

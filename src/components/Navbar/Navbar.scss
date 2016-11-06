@@ -39,7 +39,7 @@
     background-color: $punch;
     opacity: 0;
     cursor: default;
-    transition: 0.2s;
+    transition: 0.26s;
   }
 
   @media(min-width: $breakpoint-tablet) {
@@ -50,6 +50,8 @@
 
 .Navbar__item__link {
   padding: 6px;
+  border: 1px solid $onyx;
+  transition: 0.26s;
 
   &--active {
     border: 1px solid $punch;

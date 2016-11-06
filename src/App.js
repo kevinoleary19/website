@@ -11,16 +11,21 @@ import Navbar from './components/Navbar/Navbar';
 import NotFoundPage from './components/Pages/NotFoundPage/NotFoundPage';
 import ProjectPage from './components/Pages/ProjectsPage/ProjectPage';
 
-const App = () => (
-  <Router>
-    <div className="app">
-      <Navbar/>
-      <Match exactly pattern="/" component={ HomePage }/>
-      <Match pattern="/about" component={ AboutPage }/>
-      <Match pattern="/projects" component={ ProjectPage }/>
-      <Miss component={ NotFoundPage }/>
-    </div>
-  </Router>
-);
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+const App = () => {
+
+  return (
+    <Router>
+      <div className="app">
+        <Navbar/>
+        <Match exactly pattern="/" component={ HomePage }/>
+        <Match pattern="/about" component={ AboutPage }/>
+        <Match pattern="/projects" component={ ProjectPage }/>
+        <Miss component={ NotFoundPage }/>
+      </div>
+    </Router>
+  );
+};
 
 export default App;
