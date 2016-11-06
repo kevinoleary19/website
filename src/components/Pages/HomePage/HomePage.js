@@ -23,6 +23,10 @@ export default class HomePage extends Component {
     this.changeInterval = setInterval(() => this.changeHobby(), 3500);
   }
 
+  componentWillUnmount() {
+    clearInterval(this.changeInterval);
+  }
+
   changeHobby() {
     const hobbies = this.hobbies;
     const currentHobby = this.state.currentHobby;

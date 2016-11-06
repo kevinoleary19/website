@@ -21,6 +21,16 @@ const Navbar = () => (
         {(props) => <StyledLink label='Me' {...props} />}
       </Link>
     </div>
+    <div className="Navbar__item">
+      <Link to="/404">
+        {(props) => <StyledLink label='404' {...props} />}
+      </Link>
+    </div>
+    <div className="Navbar__item">
+      <Link to="/test">
+        {(props) => <StyledLink label='Test' {...props} />}
+      </Link>
+    </div>
   </div>
 );
 

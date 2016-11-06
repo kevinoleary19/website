@@ -77,6 +77,16 @@
   overflow: hidden;
 }
 
+.star-container__shooting-star {
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #d8d8d8 100%);
+  transform: translate(20vw, 20vh);
+  transition: 0.6s;
+}
+
 .star-container__star {
   transition: 3s cubic-bezier(1, 0.01, 0, 0.99);
   background-color: $cloud;
