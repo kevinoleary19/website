@@ -62,8 +62,8 @@ export default class NotFoundPage extends Component {
         <div
           className="star-container__shooting-star"
           style={{
-            transform: `translate(${shootingStarLocation.x1}vw, ${shootingStarLocation.y1}vh) 
-                        rotate(${45}deg)`
+            transform: `translate(${shootingStarLocation.x1}vw, ${shootingStarLocation.y1}vh)
+                        rotate(${45}deg) `
           }}
         />
     ) : null;
