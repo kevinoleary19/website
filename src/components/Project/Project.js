@@ -5,6 +5,7 @@ import './Project.scss';
 import { isMobile } from '../../utils/browser';
 import { Technology } from '../../types/types';
 import GithubIcon from '../shared/GithubIcon';
+import Resizable from '../HigherOrderComponents/Resizable';
 import WebLinkIcon from '../shared/WebLinkIcon';
 
 type Props = {
@@ -110,7 +111,7 @@ const Project = ({imageLeft, last, header, description, technology, src, githubL
     </div>
   );
 
-  return isMobile ? mobile : desktop;
+  return isMobile() ? mobile : desktop;
 };
 
-export default Project;
+export default Resizable(Project);

@@ -1,1 +1,3 @@
-export const isMobile = window.matchMedia('(max-device-width: 960px)').matches;
+export function isMobile() {
+  return window.matchMedia('(max-device-width: 960px)').matches;
+}
