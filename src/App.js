@@ -10,7 +10,6 @@ import HomePage from './components/Pages/HomePage/HomePage';
 import Navbar from './components/Navbar/Navbar';
 import NotFoundPage from './components/Pages/NotFoundPage/NotFoundPage';
 import ProjectPage from './components/Pages/ProjectsPage/ProjectPage';
-import TestPage from './components/Pages/TestPage/TestPage';
 
 const App = () => {
   return (
@@ -20,8 +19,6 @@ const App = () => {
         <Match exactly pattern="/" component={ HomePage }/>
         <Match pattern="/about" component={ AboutPage }/>
         <Match pattern="/projects" component={ ProjectPage }/>
-        <Match pattern="/test" component={ TestPage }/>
-        <Match pattern="/404" component={ NotFoundPage }/>
         <Miss component={ NotFoundPage }/>
       </div>
     </Router>

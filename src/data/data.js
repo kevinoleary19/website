@@ -38,12 +38,5 @@ export const projects: Array<ProjectType> = [
     src: igem,
     githubLink: null,
     webLink: "http://2015.igem.org/Team:Northeastern_Boston"
-  },
-  {
-    header: "NUSCI Website",
-    description: "Website for NUSCI magazine to publish content" +
-                  "and give brand online presence.",
-    technology: ["Wordpress", "Unix", "PHP"],
-    src: nusci
   }
 ];

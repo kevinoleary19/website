@@ -66,6 +66,9 @@ export default class Bars extends Component {
       case 'Statistics':
         generator = this.statisticsGenerator;
         break;
+      case 'Minimalism':
+        generator = this.minimalismGenerator;
+        break;
       default:
         generator = this.randomGenerator;
         break;
@@ -85,6 +88,10 @@ export default class Bars extends Component {
 
   investingGenerator(x: number) {
     return [12, 11, 17, 34, 25, 28, 45, 47, 67, 45, 51, 68, 83, 83][x];
+  }
+
+  minimalismGenerator(x: number) {
+    return 35;
   }
 
   sinGenerator(x: number, numBars: number = 12) {

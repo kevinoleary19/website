@@ -40,6 +40,11 @@
     opacity: 0;
     cursor: default;
     transition: 0.26s;
+
+    @media(max-width: $breakpoint-tablet) {
+      width: 99%;
+      margin-top: 9px;
+    }
   }
 
   @media(min-width: $breakpoint-tablet) {

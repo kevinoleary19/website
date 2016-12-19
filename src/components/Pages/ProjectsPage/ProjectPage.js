@@ -5,6 +5,7 @@ import './ProjectPage.scss';
 import { ProjectType } from '../../../types/types';
 import { projects } from '../../../data/data';
 import Project from '../../Project/Project';
+import Resizable from '../../HigherOrderComponents/Resizable';
 
 const ProjectPage = () => (
   <section className="ProjectPage">
@@ -24,4 +25,4 @@ const ProjectPage = () => (
   </section>
 );
 
-export default ProjectPage;
+export default Resizable(ProjectPage);

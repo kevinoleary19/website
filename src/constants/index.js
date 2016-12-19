@@ -1,0 +1,1 @@
+export const PROJECT_PAGE_BREAKPOINT = 960;

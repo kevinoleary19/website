@@ -102,7 +102,7 @@ const Project = ({imageLeft, last, header, description, technology, src, githubL
         <p className="Project__subheader">
           Technology Used
         </p>
-        { technology.map((technology: Technology, index: number) => (
+        {technology.map((technology: Technology, index: number) => (
           <p className="Project__text" key={index}>
             { technology }
           </p>
@@ -114,4 +114,4 @@ const Project = ({imageLeft, last, header, description, technology, src, githubL
   return isMobile() ? mobile : desktop;
 };
 
-export default Resizable(Project);
+export default Project;

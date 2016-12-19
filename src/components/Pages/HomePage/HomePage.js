@@ -16,9 +16,9 @@ export default class HomePage extends Component {
 
   constructor() {
     super();
-    this.hobbies = ['Music', 'Investing', 'Statistics', 'Landscapes'];
+    this.hobbies = ['Music', 'Investing', 'Minimalism', 'Statistics', 'Landscapes'];
     this.state = {
-      currentHobby: this.hobbies[0]
+      currentHobby: ''
     };
     this.changeInterval = setInterval(() => this.changeHobby(), 3500);
   }
