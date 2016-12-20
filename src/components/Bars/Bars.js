@@ -41,7 +41,7 @@ export default class Bars extends Component {
     for (let i = 0; i < numBars; i++) {
       bars.push({
         color: `RGB(226,94,${Math.round(bStartValue - (i * (difference / numBars)))})`,
-        height: this.sinGenerator(i, numBars)
+        height: 1
       });
     }
     return bars;
@@ -94,7 +94,7 @@ export default class Bars extends Component {
     return 35;
   }
 
-  sinGenerator(x: number, numBars: number = 12) {
+  sinGenerator(x: number, numBars: number = 14) {
     const deviation = 35;
     const yOffset = 50;
     return Math.round(deviation * Math.sin(Math.PI * x / ((numBars - 1) / 2)) + yOffset);

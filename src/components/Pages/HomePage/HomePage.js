@@ -18,9 +18,12 @@ export default class HomePage extends Component {
     super();
     this.hobbies = ['Music', 'Investing', 'Minimalism', 'Statistics', 'Landscapes'];
     this.state = {
-      currentHobby: ''
+      currentHobby: 'Orchestration'
     };
-    this.changeInterval = setInterval(() => this.changeHobby(), 3500);
+    const initialWait = 1800;
+    setTimeout(() => this.changeHobby(), initialWait);
+    const intervalStart = initialWait + 3500;
+    this.changeInterval = setInterval(() => this.changeHobby(), intervalStart);
   }
 
   componentWillUnmount() {
@@ -45,9 +48,6 @@ export default class HomePage extends Component {
 
   render() {
     const { currentHobby } = this.state;
-
-    // const electric = <div className="test">Electric Bugaloo</div>;
-    // const HomeRoute = MatchAnimate(electric);
 
     return (
       <section className="HomePage">
