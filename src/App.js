@@ -1,4 +1,5 @@
 // @flow
+import { RouteTransition } from 'react-router-transition';
 import React from 'react';
 import Router from 'react-router/BrowserRouter';
 import Match from 'react-router/Match';
@@ -11,15 +12,17 @@ import Navbar from './components/Navbar/Navbar';
 import NotFoundPage from './components/Pages/NotFoundPage/NotFoundPage';
 import ProjectPage from './components/Pages/ProjectsPage/ProjectPage';
 
+import MatchAnimate from './components/HigherOrderComponents/MatchAnimate';
+
 const App = () => {
   return (
     <Router>
       <div className="app">
         <Navbar/>
-        <Match exactly pattern="/" component={ HomePage }/>
-        <Match pattern="/about" component={ AboutPage }/>
-        <Match pattern="/projects" component={ ProjectPage }/>
-        <Miss component={ NotFoundPage }/>
+        <Match exactly pattern="/" component={HomePage}/>
+        <Match pattern="/about" component={AboutPage}/>
+        <MatchAnimate pattern="/projects" component={ProjectPage}/>
+        <Miss component={NotFoundPage}/>
       </div>
     </Router>
   );

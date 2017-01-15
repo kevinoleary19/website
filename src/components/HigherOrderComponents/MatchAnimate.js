@@ -1,50 +1,47 @@
+import { TransitionMotion, spring } from 'react-motion';
 import React, { Component } from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import Match from 'react-router/Match';
 
+const styles = {};
 
-// const MatchAnimate = ComposedComponent => class extends Component {
-//   constructor() {
-//     super();
-//     this.state = { data: null };
-//   }
-//   componentDidMount() {
-//     this.setState({ data: 'Hello' });
-//   }
-//   render() {
-//     return <ComposedComponent {...this.props} data={this.state.data} />;
-//   }
-// };
+styles.fill = {
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0
+}
 
-const MatchAnimate = (ComposedComponent) => (
-  <ReactCSSTransitionGroup
-    transitionName="page-transition"
-    transitionEnterTimeout={500}
-    transitionLeaveTimeout={300}
-  >
-    <ComposedComponent {...this.props} />
-  </ReactCSSTransitionGroup>
-);
-  // constructor(props) {
-  //   super(props);
-  // }
+const MatchAnimate = ({ component: Component, ...rest }) => {
+  const willLeave = () => ({zIndex: 1, opacity: spring(0)});
 
-  // render() {
-  //   return (
-  //     <ComposedComponent {...this.props} />
-  //   );
-  // }
+  debugger;
 
-  // render() {
-  //   return (
-  //     <ReactCSSTransitionGroup
-  //       transitionName="page-transition"
-  //       transitionEnterTimeout={500}
-  //       transitionLeaveTimeout={300}
-  //     >
-  //       <ComposedComponent {...this.props} />
-  //     </ReactCSSTransitionGroup>
-  //   );
-  // }
-// }
+  return (
+    <Match {...rest} children={({matched, ...props}) => (
+        <TransitionMotion
+          willLeave={willLeave}
+          style={matched ? [{
+            key: props.location.pathname,
+            style: { opacity: 1},
+            data: props
+          }] : []}
+        >
+          {interpolatedStyles => (
+            <div>
+              {interpolatedStyles.map(config => (
+                <div
+                  key={config.key}
+                  style={{ ...styles.fill, ...config.style}}
+                >
+                  <Component {...config.data} />
+                </div>
+              ))}
+            </div>
+          )}
+        </TransitionMotion>
+      )}/>
+  );
+};
 
 export default MatchAnimate;
