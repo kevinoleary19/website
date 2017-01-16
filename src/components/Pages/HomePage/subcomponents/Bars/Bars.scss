@@ -1,0 +1,23 @@
+.Bars__bar {
+  height: 1%;
+  width: 6%;
+  margin: 0 1.6%;
+  transition: 0.37s;
+  transform-origin: top;
+
+  @media(min-width: 667px) {
+    margin: 0 2%;
+  }
+}
+
+.Bars {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  height: 200px;
+  transform: scaleY(-1);
+
+  @media(min-width: 667px) {
+    height: 325px;
+  }
+}

@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 import { changeHobby } from './redux/actions';
-import Bars from '../../Bars/Bars';
-import DynamicGreeter from '../../DynamicGreeter/DynamicGreeter';
+import Bars from './subcomponents/Bars/Bars';
+import DynamicGreeter from './subcomponents/DynamicGreeter/DynamicGreeter';
 import './HomePage.scss';
 
 type Props = {

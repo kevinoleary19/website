@@ -1,4 +1,5 @@
 // @flow
+import { Provider } from 'react-redux'
 import React from 'react';
 import Router from 'react-router/BrowserRouter';
 import Match from 'react-router/Match';
@@ -11,16 +12,18 @@ import Navbar from './components/Navbar/Navbar';
 import NotFoundPage from './components/Pages/NotFoundPage/NotFoundPage';
 import ProjectPage from './components/Pages/ProjectsPage/ProjectPage';
 
-const App = () => (
-  <Router>
-    <div className="app">
-      <Navbar/>
-      <Match exactly pattern="/" component={HomePage}/>
-      <Match pattern="/about" component={AboutPage}/>
-      <Match pattern="/projects" component={ProjectPage}/>
-      <Miss component={NotFoundPage}/>
-    </div>
-  </Router>
+const App = ({store}: {store: any}) => (
+  <Provider store={store}>
+    <Router>
+      <div className="app">
+        <Navbar/>
+        <Match exactly pattern="/" component={HomePage}/>
+        <Match pattern="/about" component={AboutPage}/>
+        <Match pattern="/projects" component={ProjectPage}/>
+        <Miss component={NotFoundPage}/>
+      </div>
+    </Router>
+  </Provider>
 );
 
 export default App;
