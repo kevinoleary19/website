@@ -5,7 +5,6 @@ import './Project.scss';
 import { isMobile } from '../../utils/browser';
 import { Technology } from '../../types/types';
 import GithubIcon from '../shared/GithubIcon';
-import Resizable from '../HigherOrderComponents/Resizable';
 import WebLinkIcon from '../shared/WebLinkIcon';
 
 type Props = {

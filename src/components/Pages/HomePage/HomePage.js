@@ -1,26 +1,23 @@
 // @flow
+import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
+import { changeHobby } from './redux/actions';
 import Bars from '../../Bars/Bars';
 import DynamicGreeter from '../../DynamicGreeter/DynamicGreeter';
 import './HomePage.scss';
 
-// import MatchAnimate from '../../HigherOrderComponents/MatchAnimate';
+type Props = {
+  dispatch: any
+};
 
-export default class HomePage extends Component {
+class HomePage extends Component {
   changeInterval: number;
-  hobbies: Array<string>;
-  state: {
-    currentHobby: string
-  }
+  props: Props;
 
   constructor() {
     super();
-    this.hobbies = ['Music', 'Investing', 'Minimalism', 'Statistics', 'Landscapes'];
-    this.state = {
-      currentHobby: 'Orchestration'
-    };
-    const initialWait = 1800;
+    const initialWait = 1600;
     setTimeout(() => this.changeHobby(), initialWait);
     const intervalStart = initialWait + 3500;
     this.changeInterval = setInterval(() => this.changeHobby(), intervalStart);
@@ -31,34 +28,17 @@ export default class HomePage extends Component {
   }
 
   changeHobby() {
-    const hobbies = this.hobbies;
-    const currentHobby = this.state.currentHobby;
-    const index: number = hobbies.indexOf(currentHobby);
-
-    let newHobby;
-    if (index + 1 === hobbies.length) {
-      newHobby = hobbies[0];
-    } else {
-      newHobby = hobbies[index + 1];
-    }
-    this.setState({
-      currentHobby: newHobby
-    });
+    this.props.dispatch(changeHobby);
   }
 
   render() {
-    const { currentHobby } = this.state;
-
     return (
       <section className="HomePage">
-        <DynamicGreeter
-          className="HomePage__greeter"
-          currentHobby={currentHobby}
-        ></DynamicGreeter>
-        <Bars
-          currentHobby={currentHobby}
-        ></Bars>
+        <DynamicGreeter className="HomePage__greeter"/>
+        <Bars/>
       </section>
     );
   }
 };
+
+export default connect(null)(HomePage);
