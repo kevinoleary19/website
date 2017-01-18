@@ -11,8 +11,9 @@ import HomePage from './components/Pages/HomePage/HomePage';
 import Navbar from './components/Navbar/Navbar';
 import NotFoundPage from './components/Pages/NotFoundPage/NotFoundPage';
 import ProjectPage from './components/Pages/ProjectsPage/ProjectPage';
+import store from './redux/store';
 
-const App = ({store}: {store: any}) => (
+const App = () => (
   <Provider store={store}>
     <Router>
       <div className="app">

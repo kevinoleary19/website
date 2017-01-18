@@ -1,6 +1,6 @@
 // @flow
 import { connect } from 'react-redux';
-import { select } from '../../redux/selector';
+import select from '../../state/selector';
 import React, { Component } from 'react';
 
 import './Bars.scss';

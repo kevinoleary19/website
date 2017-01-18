@@ -1,11 +1,9 @@
 // @flow
-import { createReducer } from 'redux-act';
-import { changeHobby } from './actions';
+import { createAction, createReducer } from 'redux-act';
 
-const initialState = {
-  currentHobby: 'Orchestration',
-  hobbies: ['Music', 'Investing', 'Minimalism', 'Statistics', 'Landscapes']
-};
+import initialState from '../initialState';
+
+export const changeHobby = createAction();
 
 function changeHobbyReducer(state) {
   const {
@@ -29,4 +27,4 @@ function changeHobbyReducer(state) {
 
 export default createReducer({
   [changeHobby]: changeHobbyReducer
-});
+}, initialState);

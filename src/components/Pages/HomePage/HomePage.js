@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
-import { changeHobby } from './redux/actions';
+import { changeHobby } from './state/dux';
 import Bars from './subcomponents/Bars/Bars';
 import DynamicGreeter from './subcomponents/DynamicGreeter/DynamicGreeter';
 import './HomePage.scss';
@@ -28,7 +28,7 @@ class HomePage extends Component {
   }
 
   changeHobby() {
-    this.props.dispatch(changeHobby);
+    this.props.dispatch(changeHobby());
   }
 
   render() {
