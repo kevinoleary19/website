@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'react-router/Link';
-import StyledLink from '../HigherOrderComponents/StyledLink';
 
 import './Navbar.scss';
+import StyledLink from 'components/HigherOrderComponents/StyledLink';
 
 const Navbar = () => (
   <div className="Navbar">

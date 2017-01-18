@@ -3,16 +3,16 @@ import React, { Component } from 'react';
 import Link from 'react-router/Link';
 
 import './NotFoundPage.scss';
-import { isMobile } from '../../../utils/browser';
+import { isMobile } from 'utils/browser';
 
-type ShootingStarLocation = {
+type $ShootingStarLocation = {
   x1: number,
   y1: number,
   x2: number,
   y2: number
 }
 
-type Star = {
+type $Star = {
   size: number,
   x: number,
   y: number
@@ -21,14 +21,14 @@ type Star = {
 export default class NotFoundPage extends Component {
   createStarInterval: number;
   state: {
-    shootingStarLocation: ShootingStarLocation,
+    shootingStarLocation: $ShootingStarLocation,
     showShootingStar: boolean,
-    stars: Array<Star>
+    stars: Array<$Star>
   }
 
   constructor() {
     super();
-    const stars: Array<Star> = [];
+    const stars: Array<$Star> = [];
     for (let i = 0; i < 300; i++) {
       stars.push({
         size: Math.ceil(Math.random() * 5),
@@ -72,7 +72,7 @@ export default class NotFoundPage extends Component {
       <section className="NotFoundPage">
         <div className="star-container">
           { shootingStar }
-          {stars.map((star: Star, index: number) =>
+          {stars.map((star: $Star, index: number) =>
               <div
                 className="star-container__star"
                 style={{

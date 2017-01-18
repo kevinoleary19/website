@@ -1,4 +1,7 @@
+import { HOBBIES } from 'constants';
+const {INVESTING, LANDSCAPES, MINIMALISM, MUSIC, ORCHESTRATION, STATISTICS} = HOBBIES;
+
 export default {
-  currentHobby: 'Orchestration',
-  hobbies: ['Music', 'Investing', 'Minimalism', 'Statistics', 'Landscapes']
+  currentHobby: ORCHESTRATION,
+  hobbies: [MUSIC, INVESTING, MINIMALISM, STATISTICS, LANDSCAPES]
 };

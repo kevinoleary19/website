@@ -2,10 +2,10 @@
 import React from 'react';
 
 import './ProjectPage.scss';
-import { ProjectType } from '../../../types/types';
-import { projects } from '../../../data/data';
-import Project from '../../Project/Project';
-import Resizable from '../../HigherOrderComponents/Resizable';
+import { $Project } from 'types';
+import { projects } from 'data';
+import Project from 'components/Project/Project';
+import Resizable from 'components/HigherOrderComponents/Resizable';
 
 const ProjectPage = () => (
   <section className="ProjectPage">
@@ -13,7 +13,7 @@ const ProjectPage = () => (
     <div className="ProjectPage__divider-box ProjectPage__divider-box--top" />
     <div className="ProjectPage__divider-box ProjectPage__divider-box--bottom" />
     {
-      projects.map((project: ProjectType, index: number) =>
+      projects.map((project: $Project, index: number) =>
         <Project
           key={index}
           imageLeft={index % 2 === 0}

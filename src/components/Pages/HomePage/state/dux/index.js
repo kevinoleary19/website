@@ -3,7 +3,7 @@ import { createAction, createReducer } from 'redux-act';
 
 import initialState from '../initialState';
 
-export const changeHobby = createAction();
+export const changeHobby = createAction('change hobby');
 
 function changeHobbyReducer(state) {
   const {

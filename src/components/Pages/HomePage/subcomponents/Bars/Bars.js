@@ -5,19 +5,19 @@ import React, { Component } from 'react';
 
 import './Bars.scss';
 
-type Bar = {
+type $Bar = {
   color: string,
   height: number
 }
 
-type Props = {
+type $Props = {
   currentHobby: string
 }
 
 class Bars extends Component {
-  props: Props;
+  props: $Props;
   state: {
-    bars: Array<Bar>
+    bars: Array<$Bar>
   }
 
   constructor(props: Props) {
@@ -52,7 +52,7 @@ class Bars extends Component {
   // state management
   // ---------------------------------------------------------------------------
   modifyBars(newHobby: string) {
-    const { bars }: {bars: Array<Bar>} = this.state;
+    const { bars }: {bars: Array<$Bar>} = this.state;
 
     let generator;
     switch (newHobby) {

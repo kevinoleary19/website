@@ -7,18 +7,9 @@ var WatchMissingNodeModulesPlugin = require('../scripts/utils/WatchMissingNodeMo
 var paths = require('./paths');
 var env = require('./env');
 
-// This is the development configuration.
-// It is focused on developer experience and fast rebuilds.
-// The production configuration is different and lives in a separate file.
+
 module.exports = {
-  // This makes the bundle appear split into separate modules in the devtools.
-  // We don't use source maps here because they can be confusing:
-  // https://github.com/facebookincubator/create-react-app/issues/343#issuecomment-237241875
-  // You may want 'cheap-module-source-map' instead if you prefer source maps.
   devtool: 'eval',
-  // These are the "entry points" to our application.
-  // This means they will be the "root" imports that are included in JS bundle.
-  // The first two entry points enable "hot" CSS and auto-refreshes for JS.
   entry: [
     // Include WebpackDevServer client. It connects to WebpackDevServer via
     // sockets and waits for recompile notifications. When WebpackDevServer
@@ -56,33 +47,15 @@ module.exports = {
     publicPath: '/'
   },
   resolve: {
-    // This allows you to set a fallback for where Webpack should look for modules.
-    // We read `NODE_PATH` environment variable in `paths.js` and pass paths here.
-    // We use `fallback` instead of `root` because we want `node_modules` to "win"
-    // if there any conflicts. This matches Node resolution mechanism.
-    // https://github.com/facebookincubator/create-react-app/issues/253
     fallback: paths.nodePaths,
-    // These are the reasonable defaults supported by the Node ecosystem.
-    // We also include JSX as a common component filename extension to support
-    // some tools, although we do not recommend using it, see:
-    // https://github.com/facebookincubator/create-react-app/issues/290
-    extensions: ['.js', '.json', '.jsx', ''],
+    extensions: ['.js', '.json', ''],
     alias: {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web'
     }
   },
-  // Resolve loaders (webpack plugins for CSS, images, transpilation) from the
-  // directory of `react-scripts` itself rather than the project directory.
-  // You can remove this after ejecting.
-  resolveLoader: {
-    root: paths.ownNodeModules,
-    moduleTemplates: ['*-loader']
-  },
   module: {
-    // First, run the linter.
-    // It's important to do this before Babel processes the JS.
     preLoaders: [
       {
         test: /\.(js|jsx)$/,
@@ -91,18 +64,12 @@ module.exports = {
       }
     ],
     loaders: [
-      // Process JS with Babel.
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         include: paths.appSrc,
         loader: 'babel',
         query: require('./babel.dev')
       },
-      // "postcss" loader applies autoprefixer to our CSS.
-      // "css" loader resolves paths in CSS and adds assets as dependencies.
-      // "style" loader turns CSS into JS modules that inject <style> tags.
-      // In production, we use a plugin to extract that CSS to a file, but
-      // in development "style" loader enables hot editing of CSS.
       {
         test: /\.css$/,
         loader: 'style!css!postcss'
@@ -117,9 +84,6 @@ module.exports = {
         test: /\.json$/,
         loader: 'json'
       },
-      // "file" loader makes sure those assets get served by WebpackDevServer.
-      // When you `import` an asset, you get its (virtual) filename.
-      // In production, they would get copied to the `build` folder.
       {
         test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
         exclude: /\/favicon.ico$/,
@@ -128,7 +92,6 @@ module.exports = {
           name: 'static/media/[name].[hash:8].[ext]'
         }
       },
-      // A special case for favicon.ico to place it into build root directory.
       {
         test: /\/favicon.ico$/,
         include: [paths.appSrc],
@@ -137,8 +100,6 @@ module.exports = {
           name: 'favicon.ico?[hash:8]'
         }
       },
-      // "url" loader works just like "file" loader but it also embeds
-      // assets smaller than specified size as data URLs to avoid requests.
       {
         test: /\.(mp4|webm|wav|mp3|m4a|aac|oga)(\?.*)?$/,
         loader: 'url',
@@ -147,8 +108,6 @@ module.exports = {
           name: 'static/media/[name].[hash:8].[ext]'
         }
       },
-      // "html" loader is used to process template page (index.html) to resolve
-      // resources linked with <link href="./relative/path"> HTML tags.
       {
         test: /\.html$/,
         loader: 'html',
@@ -161,12 +120,9 @@ module.exports = {
   sassLoader: {
     includePaths: [ `src/shared-styles` ]
   },
-  // Point ESLint to our predefined config.
-  eslint: {
-    configFile: path.join(__dirname, 'eslint.js'),
-    useEslintrc: false
+  resolve:{
+      modulesDirectories: ['src', 'node_modules'],
   },
-  // We use PostCSS for autoprefixing only.
   postcss: function() {
     return [
       autoprefixer({

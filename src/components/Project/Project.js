@@ -2,43 +2,48 @@
 import React from 'react';
 
 import './Project.scss';
-import { isMobile } from '../../utils/browser';
-import { Technology } from '../../types/types';
-import GithubIcon from '../shared/GithubIcon';
-import WebLinkIcon from '../shared/WebLinkIcon';
+import { isMobile } from 'utils/browser';
+import { $Technology } from 'types';
+import GithubIcon from 'components/shared/GithubIcon';
+import WebLinkIcon from 'components/shared/WebLinkIcon';
 
-type Props = {
+type $Props = {
   imageLeft: boolean,
   last: boolean,
   header: string,
   description: string,
-  technology: Technology,
+  technology: $Technology,
   src: string,
   githubLink?: string,
   webLink?: string
 }
 
-const Project = ({imageLeft, last, header, description, technology, src, githubLink, webLink}: Props) => {
+const Project = ({imageLeft, last, header, description, technology, src, githubLink, webLink}: $Props) => {
+  let headerLinkIcon;
+  if (webLink) {
+    headerLinkIcon = (
+      <a
+        className="Project__header-icon"
+        href={webLink}
+        target="blank"
+      >
+        <WebLinkIcon />
+      </a>
+    );
+  }
 
-  const headerLinkIcon = webLink ? (
-    <a
-      className="Project__header-icon"
-      href={webLink}
-      target="blank"
-    >
-      <WebLinkIcon />
-    </a>
-  ) : null;
-
-  const headerGithubIcon = githubLink ? (
-    <a
-      className="Project__header-icon"
-      href={githubLink}
-      target="blank"
-    >
-      <GithubIcon />
-    </a>
-  ) : null;
+  let headerGithubIcon;
+  if (githubLink) {
+    headerGithubIcon = (
+      <a
+        className="Project__header-icon"
+        href={githubLink}
+        target="blank"
+      >
+        <GithubIcon />
+      </a>
+    );
+  }
 
   const mobile = (
     <div className="Project">
@@ -55,7 +60,7 @@ const Project = ({imageLeft, last, header, description, technology, src, githubL
         <p className="Project__subheader">
           Technology Used
         </p>
-        { technology.map((technology: Technology, index: number) => (
+        {technology.map((technology: $Technology, index: number) => (
           <p className="Project__text" key={index}>
             { technology }
           </p>
@@ -101,7 +106,7 @@ const Project = ({imageLeft, last, header, description, technology, src, githubL
         <p className="Project__subheader">
           Technology Used
         </p>
-        {technology.map((technology: Technology, index: number) => (
+        {technology.map((technology: $Technology, index: number) => (
           <p className="Project__text" key={index}>
             { technology }
           </p>

@@ -7,13 +7,13 @@ import Bars from './subcomponents/Bars/Bars';
 import DynamicGreeter from './subcomponents/DynamicGreeter/DynamicGreeter';
 import './HomePage.scss';
 
-type Props = {
+type $Props = {
   dispatch: any
 };
 
 class HomePage extends Component {
   changeInterval: number;
-  props: Props;
+  props: $Props;
 
   constructor() {
     super();

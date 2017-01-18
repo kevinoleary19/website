@@ -4,9 +4,9 @@ import datepicker from '../new-images/datepicker.png';
 import igem from '../new-images/igem.png';
 import nusci from '../new-images/nusci-cover.png';
 
-import { ProjectType } from '../types/types';
+import { $Project } from 'types';
 
-export const projects: Array<ProjectType> = [
+export const projects: Array<$Project> = [
   {
     header: "Angular 2 Datepicker",
     description: "An opensource datepicker library made for the front end web " +

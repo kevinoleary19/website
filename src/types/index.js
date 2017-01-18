@@ -1,9 +1,9 @@
-export type Technology = Array<string>;
+export type $Technology = Array<string>;
 
-export type ProjectType = {
+export type $Project = {
   header: string,
   description: string,
-  technology: Technology,
+  technology: $Technology,
   src: string,
   githubLink?: string,
   webLink?: string
