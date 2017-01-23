@@ -1,10 +1,13 @@
 import { applyMiddleware, createStore } from 'redux';
+import { createEpicMiddleware } from 'redux-observable';
 import createLogger from 'redux-logger';
 import thunk from 'redux-thunk'
 
-import reducer from './reducer';
+import { rootEpic, rootReducer } from './root';
 
-const middleware = [ thunk ]
+const epicMiddleware = createEpicMiddleware(rootEpic);
+
+const middleware = [ epicMiddleware, thunk ];
 if (process.env.NODE_ENV !== 'production') {
   middleware.push(createLogger({
     collapsed: () => true
@@ -12,7 +15,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const store = createStore(
-  reducer,
+  rootReducer,
   applyMiddleware(...middleware)
 );
 
